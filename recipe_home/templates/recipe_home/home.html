@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "" as baseeUrl%}
+<html lang="en">
+<head>
+    <style>
+	body{margin:0;
+	     border:0;
+	     padding:0;
+		font-family:"Times New Roman";
+        }
+      .head_section{
+      background-color:orange;
+      position:static;
+      font-size:25px;
+      color:white;
+      }
+      .signin{text-decoration:None;
+	color: white;
+	position:static;
+	}
+	.signup{text-decoration:None;
+	color: white;
+	position:absolute;
+	right:10px;
+	}
+    </style>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+<div class="head_section">
+    <h1>Delicious Recipes Online</h1>
+    <a class="signin"  href="sign_in">Have an account? Sign in</a>
+    <a class="signup"  href="sign_up">New User? Sign up</a>
+</div><br>
+<br>
+<marquee behavior="scroll" loop="">
+    {% for title,image in recipes%}
+
+     <h3 style="float:left"><img src="{{baseUrl}}/{{image}}" style="width:400px;height:200px;" alt="recipe image">
+         <br>
+    {{title}}</h3>
+
+    {%endfor%}
+</marquee>
+<h2 style="text-align:center;color:orange">Sign in/Sign Up to check on the recipes</h2>
+</body>
+</html>

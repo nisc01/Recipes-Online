@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	body{margin:0;
+	     border:0;
+	     padding:0;
+		font-family:"Times New Roman";
+        }
+      .head_section{
+      background-color:orange;
+      position:static;
+      font-size:25px;
+      color:white;
+      }
+      .welcome{
+	color: black;
+	position:static;
+	}
+	.logout{text-decoration:None;
+	color: black;
+	position:absolute;
+	top:125px;
+	right:20px;
+	}
+    </style>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+<div class="head_section">
+    <h1>Delicious Recipes Online</h1>
+    <p class="welcome">Welcome {{username}}</p>
+    <a class="logout" href="log_out">log out</a>
+</div>
+{%block content%}{%endblock content%}
+</body>
+</html>

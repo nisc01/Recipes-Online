@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'recipe_home/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+{%block content %}
+<blockquote>
+    <h2 style="color:green">Want to Share/Modify/Delete your recipe? Click on Add your recipes</h2>
+        <a href="your_recipes/{{username}}">
+            <p style="text-align:center;color:green;font-size:20px;">Add/Modify/Delete your recipes</p></a><br>
+
+    <h2 style="color:green">Search the Delicious recipes here</h2>
+<form action="search_recipe">
+    {%csrf_token%}
+    <p style="text-align:center;color:red;">
+        recipes should be comma separated<br><br>
+    <input type="search" name="searched_recipe" size="30" placeholder="   Enter the recipe title or ingredients"> <br>
+    <input type="hidden" name="username" value={{username}}><br>
+    <input type="submit">
+    </br>
+    </p>
+</form>
+</blockquote>
+{%endblock content %}
+</body>
+</html>

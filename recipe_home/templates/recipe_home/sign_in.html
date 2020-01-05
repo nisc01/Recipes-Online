@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+    <style>
+    h1{background-color:orange;font-size:25px;color:white;}
+    .sign_in{width:300px;padding:40px;position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);}
+    h3{font-size:20px;color:Orange}
+    </style>
+</head>
+<body>
+<h1>Delicious Recipes Online</h1>
+<form class="sign_in" action="user_authenticate" method="POST">
+    {%csrf_token%}
+    <h4>{{context}}</h4>                  <!-- this context is printed when user enters invalid input -->
+    <h3>Sign in </h3><br>
+    <input type="text" name="username" placeholder="User Name"><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <input type="submit">
+
+</form>
+</body>
+</html>
