@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'recipe_home/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+{%block content %}
+<blockquote>
+    <h2 style="color:green">Want to Share your recipe? Click on Add New recipes</h2>
+    <a href="recipe_add">
+        <p style="text-align:center;color:green;font-size:20px;">Add New recipes</p></a><br>
+    <h2 style="color:green">Posted Recipes by you</h2>
+{%for id,title in user_recipes%}
+<h3>{{title}}<a href="modify_recipe/{{id}}" title="Click to Modify Recipe" style="text-decoration:None"> Modify recipe </a>
+    <a href="delete_recipe/{{id}}" title="Click to Delete Recipe" style="text-decoration:None"> delete recipe</a></h3>
+{%endfor%}
+</blockquote>
+    {%endblock content %}
+</body>
+</html>
