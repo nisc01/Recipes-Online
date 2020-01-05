@@ -10,3 +10,4 @@ manage.py filter=lfs diff=lfs merge=lfs -text
 recipe_env filter=lfs diff=lfs merge=lfs -text
 assets filter=lfs diff=lfs merge=lfs -text
 assets/admin filter=lfs diff=lfs merge=lfs -text
+.idea filter=lfs diff=lfs merge=lfs -text
