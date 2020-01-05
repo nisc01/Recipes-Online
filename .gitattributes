@@ -2,3 +2,4 @@ test/ filter=lfs diff=lfs merge=lfs -text
 recipe_online filter=lfs diff=lfs merge=lfs -text
 recipe_home filter=lfs diff=lfs merge=lfs -text
 search_recipe filter=lfs diff=lfs merge=lfs -text
+static filter=lfs diff=lfs merge=lfs -text
