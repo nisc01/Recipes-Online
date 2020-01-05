@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'recipe_home/base.html'%}
+{% load static %}
+{% static "" as baseUrl%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+{%block content %}
+<blockquote>
+    <h2 style="color:green">Recipes list based on your search</h2>
+    {% for id,title,ingredients,image in search_result %}
+    <dl>
+        <dt><a href="recipe_detail/{{id}}" style="text-decoration:None" title="Click on to view detail recipe">
+            <p style="color:orange">{{title}}</p>
+            <img src="{{baseUrl}}/{{image}}" style="width:400px;height:200px;" alt="recipe image">
+            </a></dt>
+        <dd>Ingredients : {{ingredients}}</dd>
+        <br>
+    </dl>
+    {% endfor %}
+    {% for link,title,ingredients in search_result_api %}
+    <dl>
+        <dt><a href={{link}} style="text-decoration:None" title="Click on to view detail recipe">
+            <p style="color:orange">{{title}}</p></a></dt>
+        <dd>{{ingredients}}</dd>
+        <br>
+    </dl>
+    {% endfor %}
+</blockquote>
+{%endblock content %}
+</body>
+</html>

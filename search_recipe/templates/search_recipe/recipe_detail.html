@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'recipe_home/base.html'%}
+{% load static %}
+{% static "" as baseUrl%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Online</title>
+</head>
+<body>
+{%block content %}
+<blockquote>
+    <h2 style="color:green">Recipe - {{title}}</h2>
+    <dl>
+        <h3><img src="{{baseUrl}}/{{image}}" style="width:400px;height:200px;" alt="recipe image"></h3>
+        <h3>author_name : {{author_name}}</h3>
+<h3>date_posted  : {{date_posted}}</h3>
+<h3>ingredients  : {{ingredients}}</h3>
+<h3>description  : {{description}}</h3>
+    </dl>
+</blockquote>
+{%endblock content %}
+</body>
+</html>
